@@ -1498,6 +1498,8 @@ export type DocumentationNavbarColumn = Node & {
   items: Array<DocumentationNavbarItem>;
   /** The label of the column. */
   label: Scalars['String']['output'];
+  /** The logo of the column. */
+  logo?: Maybe<Scalars['URL']['output']>;
   /** The date the column was last updated. */
   updatedAt?: Maybe<Scalars['DateTime']['output']>;
 };
@@ -5214,6 +5216,10 @@ export type PublicationPostConnectionFilter = {
   deletedOnly?: InputMaybe<Scalars['Boolean']['input']>;
   /** Remove pinned post from the result set. */
   excludePinnedPost?: InputMaybe<Scalars['Boolean']['input']>;
+  /** Tags AND filter. All tags must be present in the post. */
+  requiredTagSlugs?: InputMaybe<Array<Scalars['String']['input']>>;
+  /** Tags AND filter. All tags must be present in the post. */
+  requiredTags?: InputMaybe<Array<Scalars['ID']['input']>>;
   /**
    * Filtering by tag slugs and tag IDs will return posts that match either of the filters.
    *
@@ -6028,6 +6034,8 @@ export type SearchPostsOfPublicationFilter = {
   publicationId: Scalars['ObjectId']['input'];
   /** The query to be searched in post. */
   query?: InputMaybe<Scalars['String']['input']>;
+  /** Tags AND filter. All tags must be present in the post. */
+  requiredTagsIds?: InputMaybe<Array<Scalars['ID']['input']>>;
   /** An array of tag Ids to filter the posts. */
   tagIds?: InputMaybe<Array<Scalars['ID']['input']>>;
   /** Filter based on time range. */

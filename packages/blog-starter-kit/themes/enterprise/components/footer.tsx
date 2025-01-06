@@ -6,6 +6,7 @@ import { SocialLinks } from './social-links';
 export const Footer = () => {
 	const { publication } = useAppContext();
 	const PUBLICATION_LOGO = publication.preferences.logo;
+	console.log(publication);
 	return (
 		<footer className="border-t py-20 dark:border-neutral-800 ">
 			<Container className="px-5">

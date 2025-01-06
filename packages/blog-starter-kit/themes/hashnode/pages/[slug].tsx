@@ -95,7 +95,12 @@ const Page = ({ page }: PageProps) => {
 			<Head>
 				<title>{title}</title>
 			</Head>
-			<div className="blog-page-area mx-auto min-h-screen px-4 py-8 md:w-2/3 md:p-10">
+			<div
+				className="blog-page-area mx-auto
+				min-h-screen
+				bg-gradient-to-br
+				from-blue-100 via-blue-50 to-white px-4 py-8 md:w-2/3 md:p-10"
+			>
 				<StaticPageContent pageContent={page} />
 			</div>
 		</>

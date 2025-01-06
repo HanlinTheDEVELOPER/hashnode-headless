@@ -141,7 +141,7 @@ function PublicationLogo(props: PublicationLogoProps) {
 		<DefaultLogo
 			publication={publication}
 			size={size}
-			withProfileImage={withProfileImage}
+			withProfileImage={true}
 			isPostPage={isPostPage}
 		/>
 	);
